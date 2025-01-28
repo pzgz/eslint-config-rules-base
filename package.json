@@ -5,6 +5,7 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
+    "./flat": "./flat.js",
     "./legacy": "./legacy.js",
     "./whitespace": "./whitespace.js",
     "./rules/best-practices": "./rules/best-practices.js",
@@ -32,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/airbnb/javascript"
+    "url": "https://github.com/pzgz/eslint-config-rules-base"
   },
   "keywords": [
     "eslint",
@@ -60,6 +61,10 @@
     {
       "name": "Harrison Shoff",
       "url": "https://twitter.com/hshoff"
+    },
+    {
+      "name": "Leon Guan",
+      "url": "https://x.com/pzgz"
     }
   ],
   "license": "MIT",
@@ -69,11 +74,11 @@
   "homepage": "https://github.com/pzgz/eslint-config-rules-base",
   "devDependencies": {
     "@babel/runtime": "^7.25.6",
-    "babel-preset-airbnb": "^4.5.0",
+    "babel-preset-airbnb": "^5.0.0",
     "babel-tape-runner": "^3.0.0",
     "eclint": "^2.8.1",
-    "eslint": "^7.32.0 || ^8.2.0",
-    "eslint-find-rules": "^4.1.0",
+    "eslint": "^9.19.0",
+    "eslint-find-rules": "^5.0.0",
     "eslint-plugin-import": "^2.30.0",
     "in-publish": "^2.0.1",
     "safe-publish-latest": "^2.0.0",

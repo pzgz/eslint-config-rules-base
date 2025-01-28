@@ -1,7 +1,7 @@
 # eslint-config-rules-base
 
 * Simple port from Airbnb's base eslint config rules from [here](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-rules-base)
-* Upgraded to eslint v9 support
+* Upgraded to eslint v9 support, by [this PR](https://github.com/airbnb/javascript/pull/3061/files#diff-1a0e408629173016fd2c9cc2f0635c8d0e3f57d9cec29351ae1a646ec79a1379)
 * Without react packages
 
 ## Usage
@@ -85,6 +85,19 @@ Lints ES5 and below. Requires `eslint` and `eslint-plugin-import`.
 2. Add `"extends": "airbnb-base/legacy"` to your .eslintrc
 
 See [Airbnb's overarching ESLint config](https://npmjs.com/eslint-config-airbnb), [Airbnb's JavaScript styleguide](https://github.com/airbnb/javascript), and the [ESlint config docs](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information.
+
+3. For flat usage with eslint v9
+
+Import `"eslint-config-airbnb-base/flat"` on your `eslint.config.mjs` file like this:
+
+  ```javascript
+  import airbnbBase from "eslint-config-airbnb-base/flat";
+
+  export default [
+    ...airbnbBase,
+    // Add your own configs
+  ];
+  ```
 
 ### eslint-config-rules-base/whitespace
 
