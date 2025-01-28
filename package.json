@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-rules-base",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "description": "Base JS ESLint config inherited from airbnb",
   "main": "index.js",
   "exports": {
@@ -47,7 +47,7 @@
     "es2017",
     "es2018"
   ],
-  "author": "Jake Teton-Landis (https://twitter.com/@jitl)",
+  "author": "Leon Guan (https://x.com/pzgz)",
   "contributors": [
     {
       "name": "Jake Teton-Landis",

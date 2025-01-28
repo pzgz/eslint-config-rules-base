@@ -1,3 +1,7 @@
+16.0.0 / 2025-01-28
+==================
+- [breaking] added eslint v9 support
+
 15.0.0 / 2021-11-08
 ==================
  - [breaking] drop eslint < 7, add eslint 8 (#2495)
