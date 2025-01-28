@@ -6,13 +6,9 @@
 
 ## Usage
 
-We export two ESLint configurations for your usage.
+Only one configuration will be exported in this repo, and only flat configuration will be supported.
 
-### eslint-config-rules-base
-
-Our default export contains all of our ESLint rules, including ECMAScript 6+. It requires `eslint` and `eslint-plugin-import`.
-
-1. Install the correct versions of each package, which are listed by the command:
+1. Install as dependancy
 
   ```sh
   npm info "eslint-config-rules-base@latest" peerDependencies
@@ -27,71 +23,12 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+. It
   If using **yarn**, you can also use the shortcut described above if you have npm 5+ installed on your machine, as the command will detect that you are using yarn and will act accordingly.
   Otherwise, run `npm info "eslint-config-rules-base@latest" peerDependencies` to list the peer dependencies and versions, then run `yarn add --dev <dependency>@<version>` for each listed peer dependency.
 
+2. For flat usage with eslint v9
 
-  If using **npm < 5**, Linux/OSX users can run
-
-  ```sh
-  (
-    export PKG=eslint-config-rules-base;
-    npm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG@latest"
-  )
-  ```
-
-  Which produces and runs a command like:
-
-  ```sh
-    npm install --save-dev eslint-config-rules-base eslint@^#.#.# eslint-plugin-import@^#.#.#
-  ```
-
-  If using **npm < 5**, Windows users can either install all the peer dependencies manually, or use the [install-peerdeps](https://github.com/nathanhleung/install-peerdeps) cli tool.
-
-  ```sh
-  npm install -g install-peerdeps
-  install-peerdeps --dev eslint-config-rules-base
-  ```
-
-  The cli will produce and run a command like:
-
-  ```sh
-  npm install --save-dev eslint-config-rules-base eslint@^#.#.# eslint-plugin-import@^#.#.#
-  ```
-
-2. Add `"extends": "airbnb-base"` to your .eslintrc.
-
-### eslint-config-rules-base/legacy
-
-Lints ES5 and below. Requires `eslint` and `eslint-plugin-import`.
-
-1. Install the correct versions of each package, which are listed by the command:
-
-  ```sh
-  npm info "eslint-config-rules-base@latest" peerDependencies
-  ```
-
-  Linux/OSX users can run
-  ```sh
-  (
-    export PKG=eslint-config-rules-base;
-    npm info "$PKG" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG"
-  )
-  ```
-
-  Which produces and runs a command like:
-
-  ```sh
-  npm install --save-dev eslint-config-rules-base eslint@^#.#.# eslint-plugin-import@^#.#.#
-  ```
-
-2. Add `"extends": "airbnb-base/legacy"` to your .eslintrc
-
-See [Airbnb's overarching ESLint config](https://npmjs.com/eslint-config-airbnb), [Airbnb's JavaScript styleguide](https://github.com/airbnb/javascript), and the [ESlint config docs](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information.
-
-3. For flat usage with eslint v9
-
-Import `"eslint-config-airbnb-base/flat"` on your `eslint.config.mjs` file like this:
+Import `"eslint-config-airbnb-base"` on your `eslint.config.mjs` file like this:
 
   ```javascript
-  import airbnbBase from "eslint-config-airbnb-base/flat";
+  import airbnbBase from "eslint-config-airbnb-base";
 
   export default [
     ...airbnbBase,
